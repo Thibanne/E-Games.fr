@@ -18,10 +18,14 @@ body {
   text-decoration: underline;
   }
 
-/*Couleur bouton et police bouton*/
-#btncolor {
+/*Radius bouton*/
+#btnrad {
+  border-radius: 40px;
+}
+
+.btncolor {
   background-color: #ea4335;
-  color: #393939;
+  color: white;
 }
 
 /*Maps Google*/
