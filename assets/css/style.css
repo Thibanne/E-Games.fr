@@ -4,11 +4,14 @@
 }
 
 .navbar-light .navbar-brand {
+  font-size: 1rem;
   color: white;
+  padding-left: 32.5rem;
 }
 
-.navbar-brand {
-  padding-left: 32.5rem;
+.navbar {
+  background-color: #1b1c1a;
+  padding: 4rem 0 4rem 0;
 }
 
 /* Fin E-Game barre */
@@ -28,12 +31,15 @@
   border-radius: 3rem;
 }
 
-a:hover {
-  color: #abafa5;
+/* geruda moins d'espace mais très lisible ou Avantgarde plus d'espace de police */
+a {
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 1rem;
+  color: white;
 }
 
-a {
-  color: white;
+a:hover {
+  color: #abafa5;
 }
 
 .nav-link{
