@@ -1,3 +1,41 @@
 body {
-  
+
 }
+/*FOOTER CSS*/
+/*Couleur footer (back et police)*/
+.fcolor {
+  background-color:  #393939;
+  color:  #ffffff;
+  }
+
+  a {
+  color: white;
+  text-decoration: none;
+  }
+
+  a:hover {
+  color: white;
+  text-decoration: underline;
+  }
+
+/*Couleur bouton et police bouton*/
+#btncolor {
+  background-color: #ffffff;
+  color: #393939;
+}
+
+/*Partie Social Media*/
+
+
+/*Couleur et forme transitions*/
+.tcolor {
+  background-color: #ffffff;
+}
+
+hr {
+	display: block;
+	margin-left: 400px;
+  margin-right: 400px;
+}
+
+/*FIN FOOTER CSS*/
