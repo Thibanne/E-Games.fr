@@ -20,13 +20,14 @@ body {
 
 /*Radius bouton*/
 #btnrad {
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .btncolor {
   background-color: #ea4335;
   color: white;
 }
+
 
 /*Maps Google*/
 
@@ -40,10 +41,17 @@ body {
   background-color: #ffffff;
 }
 
+
 hr {
 	display: block;
 	margin-left: 400px;
   margin-right: 400px;
+}
+
+/*Mise en forme paragraphe*/
+.ptext {
+  text-align: left;
+  font-size: 0.8rem;
 }
 
 /*FIN FOOTER CSS*/
