@@ -1,3 +1,44 @@
-body {
-  
+/* E-Games acceuil */
+.navbar-light .navbar-brand:hover {
+  color: black;
 }
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+.navbar-brand {
+  padding-left: 32.5rem;
+}
+
+/* Fin E-Game barre */
+
+/* Début du style de la barre de navigation */
+
+.nav {
+  background-color: black;
+}
+
+.nav-pills .nav-link.active {
+  color: black;
+  background-color: white;
+}
+
+.nav-pills .nav-link {
+  border-radius: 3rem;
+}
+
+a:hover {
+  color: #abafa5;
+}
+
+a {
+  color: white;
+}
+
+.nav-link{
+  display: block;
+  padding: 0.5rem 4.5rem;
+}
+
+/* Fin du style de la barre */
