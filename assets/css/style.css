@@ -17,7 +17,7 @@ body {
 /* On indique que dans cette grille il y'a 4 colonnes */
   grid-template-columns: repeat(4, 1fr);
 /* Et enfin on indique aussi qu'il y'a 4 lignes */
-  grid-template-rows: repeat(4, 600px);
+  grid-template-rows: repeat(4, 37.5rem);
 }
 
 .element4 {
@@ -31,15 +31,19 @@ body {
 
 /* ÉLÉMENTS DE LA CARD */
 
-.card4 {
+.card {
 /* On définit une taille fixe à la card */
-  width: 300px;
-/* On définit la marge */
-  margin: 5px;
+  width: 100%;
 /* On met le fond en blanc */
   background-color: white;
 /* On ajoute un effet d'ombre */
   box-shadow: 0px 5px 20px #999;
+/* On arrondie les coins */
+  border-radius: 8px;
+/* On centre l'image */
+  padding-top: 0.15rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* On aggrandi l'image au survol via width et on installe un filtre gris */
@@ -51,11 +55,15 @@ body {
 /* ÉLÉMENTS DE L'IMAGE */
 .card-image {
 /* On fixe la taille des images */
-  height: 250px;
+  height: 17rem;
 /* On fixe l'élément en relative comme il en contiendra en absolute */
   position: relative;
 /* On cache les éléments qui peuvent déborder du block */
-  overflow: hidden;/*3*/
+  overflow: hidden;
+/* On la décroche du haut de la card */
+  margin-top: 0.5rem;
+/* On arrondie les bords */
+  border-radius: 8px;
 }
 
 .card-image img {
@@ -80,7 +88,7 @@ où il faut) */
 /* On aligne les éléments de texte */
   text-align: center;
 /* On ajoute un padding pour éviter que les éléments soit collés entre eux */
-  padding: 15px 20px;
+  padding: 0.9rem 1.25rem;
 /* On précise en plus que le padding est dans le bloc */
   box-sizing: border-box;
 }
@@ -94,10 +102,9 @@ où il faut) */
   font-weight: bold;
 }
 
+/* On règle la distance entre les cards */
 .box{
-  background: #ccc;
-  border: 1px solid;
-  margin: 0 0.5rem 0.5rem 0;
+  /* margin: 0 0.5rem 2rem 0; */
 }
 
 /* LE BOUTON */
