@@ -10,41 +10,47 @@ body {
   margin: 5rem;
 }
 
+.gruge {
+  padding-top: 2rem;
+}
+
 /* Création d'une grille pour afficher 16 jeux en 4x4 */
 .grid {
-/* On transforme l'écran en grille afin d'afficher un tableau en 4x4 */
+  /* On transforme l'écran en grille afin d'afficher un tableau en 4x4 */
   display : grid;
-/* On indique que dans cette grille il y'a 4 colonnes */
+  /* On indique que dans cette grille il y'a 4 colonnes */
   grid-template-columns: repeat(4, 1fr);
-/* Et enfin on indique aussi qu'il y'a 4 lignes */
+  /* Et enfin on indique aussi qu'il y'a 4 lignes */
   grid-template-rows: repeat(4, 37.5rem);
 }
 
 .element4 {
-/* On décole les éléments du bord */
+  /* On décole les éléments du bord */
   margin: 50px;
-/* On les espaces d'entre eux */
+  /* On les espaces d'entre eux */
   padding : 5px;
-/* On leurs mets un fond blanc */
+  /* On leurs mets un fond blanc */
   background-color : #FFF;
 }
 
 /* ÉLÉMENTS DE LA CARD */
 
 .card {
-/* On définit une taille fixe à la card */
+  /* On définit une taille fixe à la card */
   width: 100%;
-/* On met le fond en blanc */
+  /* On met le fond en blanc */
   background-color: white;
-/* On ajoute un effet d'ombre */
+  /* On ajoute un effet d'ombre */
   box-shadow: 0px 5px 20px #999;
-/* On arrondie les coins */
+  /* On arrondie les coins */
   border-radius: 8px;
-/* On centre l'image */
+  /* On centre l'image */
   padding-top: 0.15rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
+/* ÉLÉMENTS DE L'IMAGE DE LA CARD */
 
 /* On aggrandi l'image au survol via width et on installe un filtre gris */
 .card:hover .card-image img { /*6*/
@@ -52,53 +58,59 @@ body {
   filter: grayscale(0);
 }
 
-/* ÉLÉMENTS DE L'IMAGE */
 .card-image {
-/* On fixe la taille des images */
+  /* On fixe la taille des images */
   height: 17rem;
-/* On fixe l'élément en relative comme il en contiendra en absolute */
+  /* On fixe l'élément en relative comme il en contiendra en absolute */
   position: relative;
-/* On cache les éléments qui peuvent déborder du block */
+  /* On cache les éléments qui peuvent déborder du block */
   overflow: hidden;
-/* On la décroche du haut de la card */
+  /* On la décroche du haut de la card */
   margin-top: 0.5rem;
-/* On arrondie les bords */
-  border-radius: 8px;
 }
 
 .card-image img {
-/* On fixe la taille de l'image (pas d'images en dessous de 400px) */
+  /* On fixe la taille de l'image (pas d'images en dessous de 400px) */
   width: 150%;
-/* On installe une méthode de centrage en fonction de la taille de l'image (on instaure
-.card-image comme centre puis avec transform on redéfinie son emplacement pour qu'elle soit
-où il faut) */
+  /* On installe une méthode de centrage en fonction de la taille de l'image (on instaure
+  .card-image comme centre puis avec transform on redéfinie son emplacement pour qu'elle soit
+  où il faut) */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-/* On met un filtre noir et blanc sur l'image */
+  /* On met un filtre noir et blanc sur l'image */
   filter: grayscale(1);
-/* On met un effet de transition de 300 ms quand on survol */
+  /* On met un effet de transition de 300 ms quand on survol */
   transition-property: filter width;
   transition-duration: .3s;
   transition-timing-function: ease;
 }
 
+/* On fixe l'image mais on retire l'effet de zoom */
+.fiximg {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ÉLÉMENTS DU BODY DE LA CARD */
+
 .card-body {
-/* On aligne les éléments de texte */
+  /* On aligne les éléments de texte */
   text-align: center;
-/* On ajoute un padding pour éviter que les éléments soit collés entre eux */
+  /* On ajoute un padding pour éviter que les éléments soit collés entre eux */
   padding: 0.9rem 1.25rem;
-/* On précise en plus que le padding est dans le bloc */
+  /* On précise en plus que le padding est dans le bloc */
   box-sizing: border-box;
 }
 
 .card-title {
-/* On aligne le texte */
+  /* On aligne le texte */
   text-align:center;
-/* On fait en sorte que le titre soit forcément en majuscules */
+  /* On fait en sorte que le titre soit forcément en majuscules */
   text-transform:uppercase;
-/* Et on termine par mettre le titre en gras */
+  /* Et on termine par mettre le titre en gras */
   font-weight: bold;
 }
 
@@ -110,21 +122,21 @@ où il faut) */
 /* LE BOUTON */
 
 .Abutton {
-/* On signale que l'on ne veut pas de bordure */
+  /* On signale que l'on ne veut pas de bordure */
   border: none;
-/* On donne la forme du boutton */
-	padding: 6px 6px;
-/* On arrondie les bords */
-	border-radius: 8px;
-/* On ajoute une ombre */
-	box-shadow: 2px 2px 6px #999;
-/* On lui signale que le fond est noir */
-	background: #000000;
-/* On lui dit que l'écriture est en gras */
-	font: bold 13px;
-/* On lui dit que les lettres sont en blanc */
-	color: #FFF;
-/* On indique quel type de cursor on veut lorsqu'on le survol */
+  /* On donne la forme du boutton */
+  padding: 6px 6px;
+  /* On arrondie les bords */
+  border-radius: 8px;
+  /* On ajoute une ombre */
+  box-shadow: 2px 2px 6px #999;
+  /* On lui signale que le fond est noir */
+  background: #000000;
+  /* On lui dit que l'écriture est en gras */
+  font: bold 13px;
+  /* On lui dit que les lettres sont en blanc */
+  color: #FFF;
+  /* On indique quel type de cursor on veut lorsqu'on le survol */
   cursor: pointer;
 }
 
