@@ -145,6 +145,7 @@ input[type=submit]:hover {
   margin: 5rem;
 }
 
+/* On gruge un truc, chut ... */
 .gruge {
   padding-top: 2rem;
 }
@@ -293,6 +294,26 @@ input[type=submit]:hover {
   }
 }
 
+/* CAROUSEL D'ACCUEIL */
+
+.filtercar {
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%);
+        -moz-filter: brightness(50%);
+        -o-filter: brightness(50%);
+        -ms-filter: brightness(50%);
+}
+
+/* QUI SOMMES-NOUS ? */
+
+.qsn {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.carioca {
+  text-align: center;
+}
 /* fin partie Adrien     */
 
 /* Début partie Julien */
