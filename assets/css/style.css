@@ -78,6 +78,10 @@ a:hover {
   padding-right: 10rem;
 }
 
+.tab-content {
+  padding-bottom: 3rem;
+}
+
 /* Fin du style des barres */
 
 /*Début du style de la feuille de contact*/
@@ -114,6 +118,7 @@ input[type=submit]:hover {
    background-color: #e0ffe0;
    padding: 20px;
 }
+
 /*Fin du style de la feuille de contact*/
 
 /* Responsive part */
@@ -294,8 +299,12 @@ input[type=submit]:hover {
 
 /*FOOTER CSS*/
 /*Couleur footer (back et police)*/
+.page-footer {
+  padding-top: 1.5rem;
+}
+
 .fcolor {
-  background-color:  #393939;
+  background-color:  #282727;
   color:  #ffffff;
   }
 
@@ -343,7 +352,9 @@ hr {
 .ptext {
   text-align: left;
   font-size: 0.8rem;
+  margin-bottom: 0;
 }
+
 
 /*FIN FOOTER CSS*/
 
