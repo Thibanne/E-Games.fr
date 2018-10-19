@@ -23,14 +23,15 @@
 }
 /* Fin de l'header */
 
-/* Début du style de la barre des onglets*/
+/* Début du style des barres*/
 
 .nav {
-  background-color: black;
+  background-color: #0f0f0e;
 }
 
 #pills-tab {
   margin-bottom: 1.5rem;
+  top: 3.7rem;
 }
 
 .nav-pills .nav-link.active {
@@ -58,8 +59,13 @@ a:hover {
   padding: 0.5rem 4.5rem;
 }
 
-#pills-bag-tab {
+#navbarColor {
+  background-color: black;
+}
 
+#logoNav {
+  width: 5rem;
+  height: 2rem;
 }
 
 #imgBag {
@@ -67,7 +73,11 @@ a:hover {
   height: 2rem;
 }
 
-/* Fin du style de la barre des onglets */
+#search {
+  padding-right: 10rem;
+}
+
+/* Fin du style des barres */
 
 @media (max-width: 430px){
   #header-wrapper {
