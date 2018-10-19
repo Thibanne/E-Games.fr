@@ -1,3 +1,140 @@
 body {
-  
+
+}
+/* PARTIE ADRIEN */
+
+/*  PRÉPARATION DE LA GRILLE POUR LES CARDS */
+
+/* Mise en place d'un conteneur centrant les jeux */
+#Aconteneur {
+  margin: 5rem;
+}
+
+/* Création d'une grille pour afficher 16 jeux en 4x4 */
+.grid {
+/* On transforme l'écran en grille afin d'afficher un tableau en 4x4 */
+  display : grid;
+/* On indique que dans cette grille il y'a 4 colonnes */
+  grid-template-columns: repeat(4, 1fr);
+/* Et enfin on indique aussi qu'il y'a 4 lignes */
+  grid-template-rows: repeat(4, 600px);
+}
+
+.element4 {
+/* On décole les éléments du bord */
+  margin: 50px;
+/* On les espaces d'entre eux */
+  padding : 5px;
+/* On leurs mets un fond blanc */
+  background-color : #FFF;
+}
+
+/* ÉLÉMENTS DE LA CARD */
+
+.card4 {
+/* On définit une taille fixe à la card */
+  width: 300px;
+/* On définit la marge */
+  margin: 5px;
+/* On met le fond en blanc */
+  background-color: white;
+/* On ajoute un effet d'ombre */
+  box-shadow: 0px 5px 20px #999;
+}
+
+/* On aggrandi l'image au survol via width et on installe un filtre gris */
+.card:hover .card-image img { /*6*/
+  width: 160%;
+  filter: grayscale(0);
+}
+
+/* ÉLÉMENTS DE L'IMAGE */
+.card-image {
+/* On fixe la taille des images */
+  height: 250px;
+/* On fixe l'élément en relative comme il en contiendra en absolute */
+  position: relative;
+/* On cache les éléments qui peuvent déborder du block */
+  overflow: hidden;/*3*/
+}
+
+.card-image img {
+/* On fixe la taille de l'image (pas d'images en dessous de 400px) */
+  width: 150%;
+/* On installe une méthode de centrage en fonction de la taille de l'image (on instaure
+.card-image comme centre puis avec transform on redéfinie son emplacement pour qu'elle soit
+où il faut) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/* On met un filtre noir et blanc sur l'image */
+  filter: grayscale(1);
+/* On met un effet de transition de 300 ms quand on survol */
+  transition-property: filter width;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.card-body {
+/* On aligne les éléments de texte */
+  text-align: center;
+/* On ajoute un padding pour éviter que les éléments soit collés entre eux */
+  padding: 15px 20px;
+/* On précise en plus que le padding est dans le bloc */
+  box-sizing: border-box;
+}
+
+.card-title {
+/* On aligne le texte */
+  text-align:center;
+/* On fait en sorte que le titre soit forcément en majuscules */
+  text-transform:uppercase;
+/* Et on termine par mettre le titre en gras */
+  font-weight: bold;
+}
+
+.box{
+  background: #ccc;
+  border: 1px solid;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* LE BOUTON */
+
+.Abutton {
+/* On signale que l'on ne veut pas de bordure */
+  border: none;
+/* On donne la forme du boutton */
+	padding: 6px 6px;
+/* On arrondie les bords */
+	border-radius: 8px;
+/* On ajoute une ombre */
+	box-shadow: 2px 2px 6px #999;
+/* On lui signale que le fond est noir */
+	background: #000000;
+/* On lui dit que l'écriture est en gras */
+	font: bold 13px;
+/* On lui dit que les lettres sont en blanc */
+	color: #FFF;
+/* On indique quel type de cursor on veut lorsqu'on le survol */
+  cursor: pointer;
+}
+
+/* GESTION DES MEDIAS */
+
+/* Sur téléphonne */
+@media (min-widht: 480px) and (max-width: 780px){
+  #Aconteneur {
+    float: none;
+    width: auto;
+  }
+}
+
+/* Sur tablette */
+@media (min-widht: 781px) and (max-width: 979px){
+  #Aconteneur {
+    float: none;
+    width: auto;
+  }
 }
