@@ -1,6 +1,9 @@
-// partie Adrien
+$(function(){
+  // partie Adrien
 
-// popover function bootstrap
-$('[data-toggle="popover"]').popover();
+  // popover function bootstrap
+  $('[data-toggle="popover"]').popover();
 
-// fin partie Adrien
+  // fin partie Adrien
+
+});
