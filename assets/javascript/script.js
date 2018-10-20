@@ -6,7 +6,17 @@ $(function(){
 
   // fin partie Adrien
 
+
+//    bouton ajouter au panier dans le panier
+//    retirer du panier
+//    nombre d'unité'
+//    plusieurs fois le même élement
+
     $('.Abutton').on('click', function(event) {
-      $('.modal-body').append($(this).parents('.card').eq(0).clone());
+      var card = $(this).parents('.card').eq(0);
+      var image = $('.card-image img', card).clone();
+      var title = $('.card-title button', card).html();
+      $('.modal-body').append(image);
+      $('.modal-body').append(title);
     });
 });
