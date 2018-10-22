@@ -12,88 +12,60 @@ $(function(){
  // plusieur le meme éléments
  // ajout du prix et leur total
 
- var calculateBasketTotal = function() {
+    var calculateBasketTotal = function() {
         var $table = $('.modal-body table')
         var sum = 0;
         if ($table.length == 1) {
-            $('tfoot', $table).remove();
-            $('tbody tr', $table).each(function( index ) {
+            $('tbody tr:not(.product-model)', $table).each(function() {
                 var price = $(this).data('price');
-                var productId = $(this).data('productId');
-                var amount = parseInt($('input[name="' + productId + '"]', $(this)).val());
+                var amount = parseInt($('.product-amount', $(this)).val());
                 sum += price * amount;
             });
-            var $tfoot = $('<tfoot>');
-            var $tr = $('<tr>');
-            $tr.append($('<td>').attr("colspan", 4).html('total'));
-            $tr.append($('<td>').html(sum + ' &euro;'));
-            $tfoot.append($tr);
-            $table.append($tfoot);
+            $('tfoot .sum', $table).html(sum);
         }
     }
 
     $('.add-to-basket').on('click', function(event) {
-      var $card = $(this).parents('.card').eq(0);
-      var $image = $('.card-image img', $card)
-          .clone()
-          .css({
-            maxWidth: '20px',
-            maxHeight: '20px'
-          });
-      var title = $('.card-title button', $card).html();
-      var price = $(this).data('price');
-      var productId = $(this).data('productId');
+        var $card = $(this).parents('.card').eq(0);
+        var $image = $('.card-image img', $card)
+            .clone()
+            .css({
+                maxWidth: '20px',
+                maxHeight: '20px'
+            });
+        var title = $('.card-title button', $card).html();
+        var price = $(this).data('price');
+        var productId = $(this).data('productId');
 
-      var $table = $('.modal-body table')
-      if ($table.length == 0) {
-          $table = $('<table>')
-              .css({
-                  width: '100%',
-                  border: '1px solid #000',
-                  borderCollapse: 'collapse'
-              })
-              // .append($('<thead>')); pour ajouter un thead a ce niveau
-              .append($('<tbody>'));
-          $('.modal-body').append($table);
-      }
-      if ($('tr[data-product-id="' + productId + '"]', $table).length == 0) {
-          var $tr = $('<tr>')
-              .css({
-                border: '1px solid #000'
-              })
-              .attr('data-product-id', productId)
-              .attr('data-price', price);
-          $tr.append($('<td>').append($image));
-          $tr.append($('<td>').append($('<span>').html(title)));
-          $tr.append($('<td>').append($('<span>').html(price + ' &euro;')));
-          $tr.append($('<td>').append(
-              $('<input>')
-                  .attr('type', 'number')
-                  .attr('name', productId)
-                  .attr('value', 1)
-                  .css({
-                      width: '40px'
-                  })
-                  .addClass('product-amount')
-          ));
-          $tr.append($('<td>').append(
-              $('<button>')
-                  .html('X')
-                  .addClass('remove-from-basket')
-          ));
-          $('tbody', $table).append($tr);
-      } else {
-          var $input = $('input[name="' + productId + '"]', $table);
-          $input.val(parseInt($input.val()) + 1);
-      }
-      calculateBasketTotal();
+        var $table = $('.modal-body table');
+        var $tr = $('tr[data-product-id="' + productId + '"]', $table);
+        $table.removeClass("d-none");
+        if ($tr.length == 0) {
+            var $tr = $('tr.product-model', $table)
+                .clone()
+                .removeClass('d-none product-model')
+                .attr('data-price', price)
+                .attr('data-product-id', productId);
+            $('.product-image', $tr).append($image);
+            $('.product-title', $tr).append(title);
+            $('.product-price', $tr).append(price);
+            $('.product-amount', $tr).attr('name', productId);
+            $('tbody', $table).append($tr);
+        } else {
+            var $input = $('.product-amount', $tr);
+            $input.val(parseInt($input.val()) + 1);
+        }
+        calculateBasketTotal();
     });
 
     $(document).on('click', '.remove-from-basket', function(event) {
-      $(this).parents('tr').eq(0).remove();
+        $(this).parents('tr').eq(0).remove();
+        if($('.modal-body tbody tr:not(.product-model)').length == 0){
+            $('.modal-body table').addClass('d-none');
+        };
     });
 
-    $(document).on('change', '.product-amount', function(event) {
+    $(document).on('keyup mouseup', '.product-amount', function(event) {
         calculateBasketTotal();
     });
 
