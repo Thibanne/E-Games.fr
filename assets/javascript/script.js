@@ -11,7 +11,7 @@ $(function(){
  // nombre d'unité
  // plusieur le meme éléments
  // ajout du prix et leur total
-
+var itemCount = 0;
 // fonction pour le calcul du total du panier
  var calculateBasketTotal = function() {
       // variable avec $ devant sont pour indiquer que ce sont des objets Jquery
@@ -54,6 +54,8 @@ $(function(){
     }
     // lorsque l'on clique sur le bouton "ajouter au panier" déclenche la fonction event
     $('.add-to-basket').on('click', function(event) {
+      itemCount++;
+      $('#itemCount').text(itemCount);
     // On va chercher les parents du bouton "add-to-basket" par rapport à la classe card
     // puis on lui dit de ne pas accepter de valeurs négatives
       var $card = $(this).parents('.card').eq(0);
@@ -141,6 +143,8 @@ $(function(){
 
     // Lorsque l'on clique sur le bouton remove, on lance la fonction event...
     $(document).on('click', '.remove-from-basket', function(event) {
+      itemCount--;
+      $('#itemCount').text(itemCount);
       // On vérifie les lignes du document puis on supprime celle où l'ont à cliqué
       $(this).parents('tr').eq(0).remove();
       // Puis on recalcule le total

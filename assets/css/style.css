@@ -32,6 +32,14 @@
   padding-top: 2rem;
   text-align: center;
 }
+
+#itemCount {
+  vertical-align: top;
+  font-size: 0.8rem;
+  background-color: #30ace7;
+  border-radius: 30rem;
+  color: #ffffff;
+}
 /* Fin de l'header */
 
 /* Début du style des barres*/
