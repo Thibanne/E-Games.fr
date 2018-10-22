@@ -300,7 +300,7 @@ input[type=submit]:hover {
   /* On ajoute une ombre */
   box-shadow: 2px 2px 6px #999;
   /* On lui signale que le fond est noir */
-  background: #000000;
+  background: #278aba;
   /* On lui dit que l'écriture est en gras */
   font: bold 13px;
   /* On lui dit que les lettres sont en blanc */
@@ -353,14 +353,28 @@ input[type=submit]:hover {
 /* Début partie Julien */
 
 /*FOOTER CSS*/
+
+/* modal */
+
+.backcolor {
+  background-color: #30ace7;
+  color: #ffffff;
+}
+
+/* modal button */
+
+.btnc {
+  color: #ffffff;
+}
+
 /*Couleur footer (back et police)*/
 .page-footer {
   padding-top: 1.5rem;
 }
 
 .fcolor {
-  background-color:  #282727;
-  color:  #ffffff;
+  background-color: #282727;
+  color: #ffffff;
   }
 
   a {
@@ -379,8 +393,8 @@ input[type=submit]:hover {
 }
 
 .btncolor {
-  background-color: #ea4335;
-  color: white;
+  background-color: #ffffff;
+  color: black;
 }
 
 
