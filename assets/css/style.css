@@ -302,6 +302,32 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+.Abutton:hover {
+  background-color: #282727;
+}
+
+.Bbutton {
+  /* On signale que l'on ne veut pas de bordure */
+  border: none;
+  /* On donne la forme du boutton */
+  padding: 6px 6px;
+  /* On arrondie les bords */
+  border-radius: 8px;
+  /* On ajoute une ombre */
+  box-shadow: 2px 2px 6px #999;
+  /* On lui signale que le fond est noir */
+  background: #000000;
+  /* On lui dit que l'écriture est en gras */
+  font: bold 13px;
+  /* On lui dit que les lettres sont en blanc */
+  color: #FFF;
+  /* On indique quel type de cursor on veut lorsqu'on le survol */
+  cursor: pointer;
+}
+
+.Bbutton:hover {
+  background-color: #30ace7;
+}
 /* GESTION DES MEDIAS */
 
 /* Sur téléphonne */
@@ -340,19 +366,37 @@ input[type=submit]:hover {
   text-align: center;
   margin-top: 1rem;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4fb906dbe45e1534b125ea9bd3dd34c100019f8
 /* fin partie Adrien     */
 
 /* Début partie Julien */
 
 /*FOOTER CSS*/
+
+/* modal */
+
+.backcolor {
+  background-color: #30ace7;
+  color: #ffffff;
+}
+
+/* modal button */
+
+.btnc {
+  color: #ffffff;
+}
+
 /*Couleur footer (back et police)*/
 .page-footer {
   padding-top: 1.5rem;
 }
 
 .fcolor {
-  background-color:  #282727;
-  color:  #ffffff;
+  background-color: #282727;
+  color: #ffffff;
   }
 
   a {
@@ -371,8 +415,8 @@ input[type=submit]:hover {
 }
 
 .btncolor {
-  background-color: #ea4335;
-  color: white;
+  background-color: #ffffff;
+  color: black;
 }
 
 
