@@ -326,7 +326,7 @@ input[type=submit]:hover {
   /* On ajoute une ombre */
   box-shadow: 2px 2px 6px #999;
   /* On lui signale que le fond est noir */
-  background: #000000;
+  background: #278aba;
   /* On lui dit que l'écriture est en gras */
   font: bold 13px;
   /* On lui dit que les lettres sont en blanc */
@@ -338,6 +338,7 @@ input[type=submit]:hover {
 .Bbutton:hover {
   background-color: #30ace7;
 }
+
 /* GESTION DES MEDIAS */
 
 /* Sur téléphonne */
