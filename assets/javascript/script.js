@@ -17,7 +17,8 @@ $(function(){
       // variable avec $ devant sont pour indiquer que ce sont des objets Jquery
       // Déclaration d'un objet jquerry dans une variable (reconnaissable au "$")
       // et mise en place d'un tableau ("table") par rapport au "body" du Modal
-      // variable avec $ devant sont pour indiquer que ce sont des objets Jquery// faisant en sorte que "table" est l'enfant de modal-body
+      // variable avec $ devant sont pour indiquer que ce sont des objets Jquery
+      // faisant en sorte que "table" est l'enfant de modal-body
         var $table = $('.modal-body table')
       // Variable "sum" qui commence à 0
         var sum = 0;
@@ -44,7 +45,7 @@ $(function(){
             // les 4 premières colones) puis on y écrit le texte
             $tr.append($('<td>').attr("colspan", 4).text('Total'));
             // Dans la ligne, ajout d'une colone où on y écrit la valeur totale
-            $tr.append($('<td>').text(sum + ' €'));
+            $tr.append($('<td>').text(sum + '€'));
             // Ajout d'une ligne dans le tfoot
             $tfoot.append($tr);
             // Ajout du tfoot dans le tableau
@@ -101,7 +102,7 @@ $(function(){
           // Dans la ligne on créer une colonne image, puis une colone titre, puis une colone prix
           $tr.append($('<td>').append($image));
           $tr.append($('<td>').append($('<span>').text(title)));
-          $tr.append($('<td>').append($('<span>').text((price) + ' &euro;')));
+          $tr.append($('<td>').append($('<span>').text((price) + ' €')));
           // Dans la ligne on créer une colone, puis un champ...
           $tr.append($('<td>').append(
               $('<input>')
