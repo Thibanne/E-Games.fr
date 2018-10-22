@@ -286,6 +286,9 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+.Abutton:hover {
+  background-color: #282727;
+}
 /* GESTION DES MEDIAS */
 
 /* Sur téléphonne */
@@ -320,9 +323,6 @@ input[type=submit]:hover {
   text-align: center;
   margin-top: 1rem;
 }
-
-.carioca {
-  text-align: center;
 
 /* fin partie Adrien     */
 
