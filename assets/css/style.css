@@ -342,7 +342,22 @@ input[type=submit]:hover {
   margin-top: 1rem;
 }
 
-/* fin partie Adrien     */
+/* COMPTE DES ARTICLES */
+
+#itemCount {
+  position: absolute;
+  display: none;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+}
+
+/* fin partie Adrien */
 
 /* Début partie Julien */
 
