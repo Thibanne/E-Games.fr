@@ -5,13 +5,17 @@ $(function(){
   $('[data-toggle="popover"]').popover();
 
   // fin partie Adrien
+  var countProductTotal = function() {
+    var $table = $('.modal-body table')
+    return $('tbody tr', $table).length;
 
+  }
  // ajout dans le Panier
  // retirer du Panier
  // nombre d'unité
  // plusieur le meme éléments
  // ajout du prix et leur total
-var itemCount = 0;
+
 // fonction pour le calcul du total du panier
  var calculateBasketTotal = function() {
       // variable avec $ devant sont pour indiquer que ce sont des objets Jquery
@@ -29,13 +33,14 @@ var itemCount = 0;
             // Pour chaque ligne du body du tableau ...
             $('tbody tr', $table).each(function( index ) {
               // on va cherché le prix
-                var price = $(this).data('price');
+                var price = Number(parseFloat($(this).data('price')));
               // on va cherché l'id du produit
                 var productId = $(this).data('productId');
               // on va cherché la quantité en s'assurant d'avoir un entier
                 var amount = parseInt($('input[name="' + productId + '"]', $(this)).val());
               // On ajoute à "sum" le prix multiplié par la quantité
                 sum += price * amount;
+                sum = parseFloat(sum).toFixed(2);
             });
             // Création du tfoot dans une variable
             var $tfoot = $('<tfoot>');
@@ -45,17 +50,27 @@ var itemCount = 0;
             // les 4 premières colones) puis on y écrit le texte
             $tr.append($('<td>').attr("colspan", 4).text('Total'));
             // Dans la ligne, ajout d'une colone où on y écrit la valeur totale
-            $tr.append($('<td>').text(sum + '€'));
+            $tr.append($('<td>').text(sum + ' €'));
             // Ajout d'une ligne dans le tfoot
             $tfoot.append($tr);
             // Ajout du tfoot dans le tableau
             $table.append($tfoot);
         }
+        console.log(countProductTotal());
     }
+
+
+
+
+
+
+
+
+
+
     // lorsque l'on clique sur le bouton "ajouter au panier" déclenche la fonction event
     $('.add-to-basket').on('click', function(event) {
-      itemCount++;
-      $('#itemCount').text(itemCount);
+      $('#itemCount').text(countProductTotal());
     // On va chercher les parents du bouton "add-to-basket" par rapport à la classe card
     // puis on lui dit de ne pas accepter de valeurs négatives
       var $card = $(this).parents('.card').eq(0);
@@ -143,8 +158,7 @@ var itemCount = 0;
 
     // Lorsque l'on clique sur le bouton remove, on lance la fonction event...
     $(document).on('click', '.remove-from-basket', function(event) {
-      itemCount--;
-      $('#itemCount').text(itemCount);
+      $('#itemCount').text(countProductTotal());
       // On vérifie les lignes du document puis on supprime celle où l'ont à cliqué
       $(this).parents('tr').eq(0).remove();
       // Puis on recalcule le total
