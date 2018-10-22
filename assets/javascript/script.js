@@ -113,7 +113,7 @@ $(function(){
                   .attr('name', productId)
                   .attr('value', 1)
                   .css({
-                      width: '40px'
+                      width: '60px'
                   })
                   // On ajoute une classe "product-amount"
                   .addClass('product-amount')
@@ -122,7 +122,7 @@ $(function(){
           // puis on rajoute une class "remove-from-basket"
           $tr.append($('<td>').append(
               $('<button>')
-                  .html('X')
+                  .html('<i class="fas fa-trash-alt"></i>')
                   .addClass('remove-from-basket')
 
           ));
