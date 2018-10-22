@@ -18,6 +18,16 @@
   height: 35%;
 }
 
+.btn-secondary {
+  background-color: #68c7e8;
+  border-color: #4f97af;
+}
+
+.btn-secondary:hover {
+  background-color: #39b9e5;
+  border-color: #2a6d84;
+}
+
 .titlehead {
   padding-top: 2rem;
   text-align: center;
@@ -93,7 +103,7 @@ a:hover {
 input.names, select, textarea {
    width: 100%; /* Full width */
    padding: 0.75rem; /* Some padding */
-   border: 0.0625rem solid #aed6a4; /* Gray border */
+   border: 0.0625rem solid #a4d4d6; /* blue border */
    border-radius: 0.25rem; /* Rounded borders */
    box-sizing: border-box; /* Make sure that padding and width stays in place */
    margin-top: 0.375rem; /* Add a top margin */
@@ -119,7 +129,7 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .c {
    border-radius: 0.8rem;
-   background-color: #e0ffe0;
+   background-color: #e0f6ff;
    padding: 1.5rem;
  }
 
