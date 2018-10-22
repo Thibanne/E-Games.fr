@@ -31,7 +31,6 @@
 }
 
 #pills-tab {
-    margin-bottom: 1.5rem;
   top: 3.7rem;
 }
 
@@ -82,12 +81,6 @@ a:hover {
   padding-bottom: 2.5rem;
 }
 
-
-.image {
-  background-image: url("../imgs/fondBody.png");
-  background-size: 100% 180vh;
-}
-
 /* Fin du style des barres */
 
 /*Début du style de la feuille de contact*/
@@ -133,7 +126,7 @@ input[type=submit]:hover {
 /*Fin du style de la feuille de contact*/
 
 /* Responsive part */
-@media (max-width: 430px){
+@media (max-width: 480px){
   #header-wrapper {
     background-size: 100% 30vh;
     background-position: top;
@@ -144,6 +137,29 @@ input[type=submit]:hover {
   #logo{
     width: 60%;
     height: 60%;
+  }
+
+  .image {
+    background-image: url();
+    background-size: 100% 180vh;
+  }
+
+  #imgBag {
+    padding-left: 1rem;
+    width: 3rem;
+    height: 2rem;
+  }
+
+  .nav-pills .nav-link.active {
+    color: lightgrey;
+  }
+
+  .nav-link{
+    display: contents;
+  }
+
+  .nav {
+    padding-left: 3rem;
   }
 }
 
@@ -314,16 +330,16 @@ input[type=submit]:hover {
         -ms-filter: brightness(50%);
 }
 
+.d-block {
+  padding-top: 2rem;
+}
+
 /* QUI SOMMES-NOUS ? */
 
 .qsn {
   text-align: center;
   margin-top: 1rem;
 }
-
-.carioca {
-  text-align: center;
-
 /* fin partie Adrien     */
 
 /* Début partie Julien */
